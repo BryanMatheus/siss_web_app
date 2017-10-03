@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function() {
         checkTextfieldInput(inputs[i]);
     }
 
+    document.querySelector('#btnLogin').addEventListener("click", login);
+
 });
 
 function checkTextfieldInput(input) {
@@ -74,3 +76,26 @@ Element.prototype.closest = function(selector) {
 Element.prototype.isActive = function() {
     return this === document.activeElement;
 };
+
+function login() {
+    let cartao = document.querySelector('#txtCartao').textContent;
+    let URL = "http://saudeservicosbeta.barueri.sp.gov.br/SaudeAPI/token";
+    var params = "grant_type=password&username=" + cartao;
+    var xmlhttp = new XMLHttpRequest();
+    //xmlhttp.onreadystatechange = callbackFunction(xmlhttp);
+    xmlhttp.open("POST", URL, false);
+    xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    //xmlhttp.setRequestHeader('Authorization', 'Basic ' + window.btoa('apiusername:apiuserpassword')); //in prod, you should encrypt user name and password and provide encrypted keys here instead 
+    //xmlhttp.onreadystatechange = callbackFunction(xmlhttp);
+    xmlhttp.send(params);
+    let result = JSON.parse(xmlhttp.responseText);
+
+    window.localforage.setItem('userValid', result.access_token).then(function(value) {
+        // Do other things once the value has been saved.
+        console.log(value);
+        window.location = '/index.html';
+    }).catch(function(err) {
+        // This code runs if there were any errors
+        console.log(err);
+    });
+}
