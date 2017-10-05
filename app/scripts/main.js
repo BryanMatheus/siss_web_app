@@ -78,24 +78,25 @@
 
     document.addEventListener('DOMContentLoaded', function() {
         window.localforage.getItem('userValid').then(function(jwtoken) {
+            console.log(jwtoken);
             if (!jwtoken)
                 window.location = '/login.html';
 
 
-            let URL = "http://saudeservicosbeta.barueri.sp.gov.br/SaudeAPI/api/v1/pessoa/obter";
+            let URL = 'http://saudeservicosbeta.barueri.sp.gov.br/SaudeAPI/api/v1/pessoa/obter';
             var xmlhttp = new XMLHttpRequest();
             //xmlhttp.onreadystatechange = callbackFunction(xmlhttp);
-            xmlhttp.open("GET", URL, false);
+            xmlhttp.open('GET', URL, false);
             //xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             xmlhttp.setRequestHeader('Authorization', 'Bearer ' + jwtoken);
-            //xmlhttp.setRequestHeader('Authorization', 'Basic ' + window.btoa('apiusername:apiuserpassword')); //in prod, you should encrypt user name and password and provide encrypted keys here instead 
+            //xmlhttp.setRequestHeader('Authorization', 'Basic ' + window.btoa('apiusername:apiuserpassword')); //in prod, you should encrypt user name and password and provide encrypted keys here instead
             //xmlhttp.onreadystatechange = callbackFunction(xmlhttp);
             xmlhttp.send();
             let r = JSON.parse(xmlhttp.responseText);
 
             if (r.resultado) {
                 paciente = r.object;
-                document.querySelector(".Name").textContent = paciente.nome;
+                document.querySelector('.Name').textContent = paciente.nome;
             } else {
                 console.log(r.mensagem);
             }
