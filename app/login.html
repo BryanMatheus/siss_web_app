@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Web Application Manifest -->
+    <!--<link rel="manifest" href="manifest.json"> -->
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Web Starter Kit">
+    <!-- <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png"> -->
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+    <!-- <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png"> -->
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <!-- <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png"> -->
+    <meta name="msapplication-TileColor" content="#2F3BA2">
+
+    <!-- Color the status bar on mobile devices -->
+    <meta name="theme-color" content="#2F3BA2">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-green.min.css">
+    <link rel="stylesheet" href="styles/login.css">
+</head>
+
+<body>
+
+    <div class="mdl-layout mdl-js-layout">
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <hgroup>
+                    <img src="images/logo.gif">
+                </hgroup>
+                <form class="mdl-shadow--4dp" action="#">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <i class="mdl-textfield__icon material-icons mdl-color-text--blue-grey-200">perm_identity</i>
+                        <input class="mdl-textfield__input" type="text" id="txtCartao">
+                        <label class="mdl-textfield__label" for="txtCartao">Cartão Cidadão</label>
+                    </div>
+                    <div class="mdl-container--login-button">
+                        <button id="btnLogin" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+                                    LOGIN
+                                  </button>
+                    </div>
+                </form>
+                <footer>
+                    <a href="http://www.sissonline.com.br" target="_blank"><img src="images/logo.gif"></a>
+                    <p>® 2015 SISS. Todos os direitos resrvados. <a href="http://www.eiconbrasil.com.br/" target="_blank">EICON</a></p>
+                </footer>
+            </div>
+        </main>
+    </div>
+
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="scripts/localforage.min.js"></script>
+    <script src="scripts/login.js"></script>
+
+</body>
+
+</html>
