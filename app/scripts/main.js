@@ -80,7 +80,7 @@
     document.addEventListener('DOMContentLoaded', function() {
         window.localforage.getItem('userValid').then(function(jwtoken) {
             if (!jwtoken)
-                window.location = '/login.html';
+                window.location = '/siss_web_app/app/login.html';
 
 
             let URL = 'http://saudeservicosbeta.barueri.sp.gov.br/SaudeAPI/api/v1/pessoa/obter';
