@@ -92,7 +92,7 @@ function login() {
     window.localforage.setItem('userValid', result.access_token).then(function(value) {
         // Do other things once the value has been saved.
         console.log(value);
-        window.location = '/siss_web_app/app/index.html';
+        window.location = 'https://devalissonpinto.github.io/siss_web_app/app/index.html';
     }).catch(function(err) {
         // This code runs if there were any errors
         console.log(err);
