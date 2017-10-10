@@ -1,10 +1,10 @@
 {
   "version": "1.0.0",
   "name": "SISS",
-  "launch_path": "/index.html",
+  "launch_path": "https://devalissonpinto.github.io/siss_web_app/app/index.html",
   "description": "Siss Online",
   "icons": {
-    "128": "/images/touch/icon-128x128.png"
+    "128": "/images/touch/logo_siss_completo.png"
   },
   "developer": {
     "name": "",
