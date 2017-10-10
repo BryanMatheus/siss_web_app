@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "SISS",
+  "name": "SISS Online",
   "launch_path": "https://devalissonpinto.github.io/siss_web_app/app/index.html",
   "description": "Siss Online",
   "icons": {
@@ -18,7 +18,7 @@
   },
   "locales": {
     "en": {
-      "name": "SISS",
+      "name": "SISS Online",
       "description": "Siss Online"
     }
   }
