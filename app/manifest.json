@@ -2,8 +2,8 @@
     "name": "SISS",
     "short_name": "SISS",
     "icons": [{
-        "src": "images/touch/icon-128x128.png",
-        "sizes": "128x128",
+        "src": "images/touch/logo_siss_completo.png",
+        "sizes": "800x313",
         "type": "image/png"
     }, {
         "src": "images/touch/apple-touch-icon.png",
@@ -14,12 +14,12 @@
         "sizes": "144x144",
         "type": "image/png"
     }, {
-        "src": "images/touch/chrome-touch-icon-192x192.png",
-        "sizes": "192x192",
+        "src": "images/touch/logo_siss.png",
+        "sizes": "730x224",
         "type": "image/png"
     }],
     "start_url": "/index.html?homescreen=1",
     "display": "standalone",
     "background_color": "#3E4EB8",
-    "theme_color": "#2F3BA2"
+    "theme_color": "#004d40"
 }
